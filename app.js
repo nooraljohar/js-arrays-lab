@@ -17,7 +17,82 @@ const favFood = foods[1];
 console.log('Exercise 4 result:', favFood);
 
 //Exercise 5: Insert an element between two others
-foods.splice(1, 0, 'tofu');
+foods.splice(2, 0, 'tofu');
 console.log('Exercise 5 result:', foods);
 
 //Exercise 6: Replace elements
+foods.splice(1,1, 'sushi', 'cupcack');
+console.log('Exercise 6 result:', foods);
+
+//Exercise 7: Using the slice() method
+const yummy = foods.slice(1,3);
+console.log('Exercise 7 result:', yummy);
+
+//Exercise 8: Finding an index
+const soyIdx = foods.indexOf('tofu')
+console.log('Exercise 8 result:', soyIdx);
+
+//Exercise 9: Joining elements
+const allFoods = foods.join('->')
+console.log('Exercise 9 result:', allFoods);
+
+//Exercise 10: Check for an element
+const hasSoup = foods.includes('soup')
+console.log('Exercise 10 result:', hasSoup);
+
+//Exercise 11: Odd numbers from an array
+const nums = [100, 5, 23, 15, 21, 72, 9, 45, 66, 7, 81, 90];
+const odds = [];
+nums.forEach(num => {
+    if (num % 2 !== 0){ 
+        odds.push(num)
+    }
+})
+console.log('Exercise 11 result:', odds);
+
+//Exercise 12: FizzBuzz with arrays
+const fizz = [];
+const buzz = [];
+const fizzbuzz = [];
+nums.forEach(num => {
+    if (num % 3 === 0){ 
+        fizz.push(num);
+    }
+     if (num % 5 === 0){
+        buzz.push(num);
+    }
+    if(num % 3 === 0 && num % 5 === 0){
+        fizzbuzz.push(num);
+    }
+
+    }
+)
+console.log('Exercise 12 Results:');
+console.log('  fizz:', fizz);
+console.log('  buzz:', buzz);
+console.log('  fizzbuzz:', fizzbuzz);
+
+//Exercise 13: Retrieve the last array
+const numArrays = [
+	[100, 5, 23],
+	[15, 21, 72, 9],
+	[45, 66],
+	[7, 81, 90]
+];
+const numList = numArrays[numArrays.length - 1];
+
+console.log('Exercise 13 result:', numList);
+
+//Exercise 14: Accessing within nested arrays
+const num = numArrays[2][1];
+console.log('Exercise 14 result:', num);
+
+//Exercise 15: Nested array sum
+let total = 0;
+
+for (let i = 0; i < numArrays.length; i++) {
+  for (let j = 0; j < numArrays[i].length; j++) {
+    total += numArrays[i][j]; 
+  }
+}
+console.log('Exercise 15 result:\n', total);
